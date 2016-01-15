@@ -13,7 +13,7 @@ public:
 
 Node::~Node()
 {
-	delete this->name;
+	//delete this->name;
 }
 
 char* Node::getName() const
