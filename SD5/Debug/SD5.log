@@ -1,17 +1,20 @@
-﻿Build started 17.1.2016 г. 15:09:27.
+﻿Build started 17.1.2016 г. 19:40:06.
      1>Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
-         Source.cpp
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\graph.h(28): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(39): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(79): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(103): error C2664: 'void Group::addMember(People *)': cannot convert argument 1 from 'People' to 'People *'
-         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(103): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(102): warning C4390: ';': empty controlled statement found; is this the intent?
+     1>Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.lib" /MACHINE:X86 Debug\Solver.obj
+         Debug\Source.obj
+     1>Source.obj : error LNK2005: "public: __thiscall Node::~Node(void)" (??1Node@@QAE@XZ) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: void __thiscall People::addConnection(class People *)" (?addConnection@People@@QAEXPAV1@@Z) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: void __thiscall People::addGroup(class Group *)" (?addGroup@People@@QAEXPAVGroup@@@Z) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: void __thiscall Group::addMember(class People *)" (?addMember@Group@@QAEXPAVPeople@@@Z) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: class std::vector<class People *,class std::allocator<class People *> > __thiscall People::getConnections(void)const " (?getConnections@People@@QBE?AV?$vector@PAVPeople@@V?$allocator@PAVPeople@@@std@@@std@@XZ) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: class std::vector<class Group *,class std::allocator<class Group *> > __thiscall People::getGroups(void)const " (?getGroups@People@@QBE?AV?$vector@PAVGroup@@V?$allocator@PAVGroup@@@std@@@std@@XZ) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: class std::vector<class People *,class std::allocator<class People *> > __thiscall Group::getMembers(void)const " (?getMembers@Group@@QBE?AV?$vector@PAVPeople@@V?$allocator@PAVPeople@@@std@@@std@@XZ) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: char * __thiscall Node::getName(void)const " (?getName@Node@@QBEPADXZ) already defined in Solver.obj
+     1>Source.obj : error LNK2005: "public: void __thiscall Node::setName(char *)" (?setName@Node@@QAEXPAD@Z) already defined in Solver.obj
+     1>C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.exe : fatal error LNK1169: one or more multiply defined symbols found
      1>Done Building Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:03.29
+Time Elapsed 00:00:02.81
