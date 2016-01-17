@@ -1,17 +1,17 @@
-﻿Build started 15.1.2016 г. 21:55:53.
+﻿Build started 17.1.2016 г. 15:09:27.
      1>Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\graph.h(27): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\graph.h(28): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(41): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(82): warning C4018: '<': signed/unsigned mismatch
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.lib" /MACHINE:X86 Debug\Source.obj
-         SD5.vcxproj -> C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.exe
-     1>Done Building Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" (Build target(s)).
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(39): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(79): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(103): error C2664: 'void Group::addMember(People *)': cannot convert argument 1 from 'People' to 'People *'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(103): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\source.cpp(102): warning C4390: ';': empty controlled statement found; is this the intent?
+     1>Done Building Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:05.39
+Time Elapsed 00:00:03.29

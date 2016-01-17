@@ -14,17 +14,15 @@ int main(int argc, char* argv[])
 	std::string value;
 	size_t rows = 0;
 
-	std::vector<Node> groupNames;
-	std::vector<Node> people;
+	std::vector<Group> groupNames;
+	std::vector<People> people;
 
 	while (file.good())
-	{
-		//value.clear();
+	{		
 		std::getline(file, value, '\n');
-		//std::cout << value << "\n";
-		map.resize(rows + 1);
+		
 
-		//Reading Group names:
+		//Reading Group names at the first row:
 		if (rows == 0)
 		{
 			for (size_t i = 0; i < value.length(); i++)
@@ -46,18 +44,17 @@ int main(int argc, char* argv[])
 
 					temp[count - i] = '\0';
 
-					Node* tempNode = new Node;
+					Group* tempNode = new Group;
 					tempNode->setName(temp);
 					groupNames.push_back(*tempNode);
 
 					i = count;
 				}
 			}
-
 		}
 		else
 		{
-
+			map.resize(rows );
 			for (size_t i = 0; i < value.length(); i++)
 			{
 				if (value[i] != ',' && value[i] != ';')
@@ -65,9 +62,9 @@ int main(int argc, char* argv[])
 					if (isdigit(value[i]))
 					{
 						if (value[i] == '0')
-							map[rows].push_back(false);
+							map[rows - 1].push_back(false);
 						else
-							map[rows].push_back(true);
+							map[rows - 1].push_back(true);
 
 					}
 					else //if it's not digit it's a name:
@@ -85,14 +82,12 @@ int main(int argc, char* argv[])
 
 						temp[count - i] = '\0';
 
-						Node* tempNode = new Node;
+						People* tempNode = new People;
 						tempNode->setName(temp);
 						people.push_back(*tempNode);
 
 						i = count;
 					}
-
-
 				}
 			}
 		}
@@ -100,11 +95,25 @@ int main(int argc, char* argv[])
 		rows++;
 	}
 
+	for (size_t i = 0; i < map.size(); i++)
+	{
+		for (size_t j = 0; j < map[0].size(); j++)
+		{
+			if (map[i][j] == true)
+			{
+				groupNames[j].addMember(&people[i]);
+				people[i].addGroup(&groupNames[i]);
+			}
+		}
+	}
+
+
+
 	//test:
 
 	for (size_t i = 0; i < map.size(); i++)
 	{
-		for (size_t j = 1; j < map[1].size(); j++)////////
+		for (size_t j = 0; j < map[0].size(); j++)
 		{
 			if(map[i][j] == true)
 				std::cout << "{" << "true" << "}";
@@ -114,6 +123,15 @@ int main(int argc, char* argv[])
 		std::cout << std::endl;
 	}
 
+	for (size_t i = 0; i < people.size(); i++)
+	{
+		std::cout << people[i].getName() << std::endl;
+	}
+	std::cout << "\n@@@@@@@@@@@@@@@@@@@\n";
+	for (size_t i = 0; i < groupNames.size(); i++)
+	{
+		std::cout << groupNames[i].getName() << std::endl;
+	}
 	
 	return 0;
 }
