@@ -1,4 +1,4 @@
-#include "Solver.h"
+//#include "Solver.h"
 
 Solver::Solver(std::string filePath)
 {
@@ -74,7 +74,7 @@ void Solver::readFromFile(std::string filePath)
 			{
 				if (value[i] != ',' && value[i] != ';')
 				{
-					int count = i;
+					size_t count = i;
 					char temp[64];
 
 					while (value[count] != ',' && value[count] != ';')
@@ -145,9 +145,9 @@ void Solver::readFromFile(std::string filePath)
 
 void Solver::printMostConnectedGroups()
 {
-	int id1, id2;
+	size_t id1, id2;
 	id1 = id2 = 0;
-	int count = 0;
+	size_t count = 0;
 
 	for (size_t i = 0; i < groupNames.size(); i++)
 	{
@@ -163,7 +163,7 @@ void Solver::printMostConnectedGroups()
 
 	std::cout << "Most connected groups:\n";
 	std::cout << groupNames[id1].getName() << " with "
-		<< groupNames[id2].getName() << std::endl;
+		      << groupNames[id2].getName() << std::endl;
 }
 
 void Solver::printMostConnectedPeople()

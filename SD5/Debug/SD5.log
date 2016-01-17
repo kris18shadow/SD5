@@ -1,20 +1,135 @@
-﻿Build started 17.1.2016 г. 19:40:06.
+﻿Build started 17.1.2016 г. 20:18:45.
      1>Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.lib" /MACHINE:X86 Debug\Solver.obj
-         Debug\Source.obj
-     1>Source.obj : error LNK2005: "public: __thiscall Node::~Node(void)" (??1Node@@QAE@XZ) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: void __thiscall People::addConnection(class People *)" (?addConnection@People@@QAEXPAV1@@Z) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: void __thiscall People::addGroup(class Group *)" (?addGroup@People@@QAEXPAVGroup@@@Z) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: void __thiscall Group::addMember(class People *)" (?addMember@Group@@QAEXPAVPeople@@@Z) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: class std::vector<class People *,class std::allocator<class People *> > __thiscall People::getConnections(void)const " (?getConnections@People@@QBE?AV?$vector@PAVPeople@@V?$allocator@PAVPeople@@@std@@@std@@XZ) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: class std::vector<class Group *,class std::allocator<class Group *> > __thiscall People::getGroups(void)const " (?getGroups@People@@QBE?AV?$vector@PAVGroup@@V?$allocator@PAVGroup@@@std@@@std@@XZ) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: class std::vector<class People *,class std::allocator<class People *> > __thiscall Group::getMembers(void)const " (?getMembers@Group@@QBE?AV?$vector@PAVPeople@@V?$allocator@PAVPeople@@@std@@@std@@XZ) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: char * __thiscall Node::getName(void)const " (?getName@Node@@QBEPADXZ) already defined in Solver.obj
-     1>Source.obj : error LNK2005: "public: void __thiscall Node::setName(char *)" (?setName@Node@@QAEXPAD@Z) already defined in Solver.obj
-     1>C:\Users\Chris\documents\visual studio 2015\Projects\SD5\Debug\SD5.exe : fatal error LNK1169: one or more multiply defined symbols found
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Solver.cpp Source.cpp
+         Source.cpp
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\node.h(26): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+         Solver.cpp
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(3): error C2653: 'Solver': is not a class or namespace name
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(3): error C2039: 'string': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(3): error C2065: 'string': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(3): error C2146: syntax error: missing ')' before identifier 'filePath'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(4): error C2143: syntax error: missing ';' before '{'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(4): error C2447: '{': missing function header (old-style formal list?)
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(9): error C2653: 'Solver': is not a class or namespace name
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(9): error C2065: 'Group': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(9): error C2065: 'left': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(9): error C2065: 'right': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(10): error C2448: 'findCommonMembers': function-style initializer appears to be a function definition
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(25): error C2653: 'Solver': is not a class or namespace name
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(27): error C2065: 'map': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(27): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(27): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(29): error C2065: 'map': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(29): error C2228: left of '.size' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(31): error C2065: 'map': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(34): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(34): error C2228: left of '.addMember' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(34): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(36): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(36): error C2228: left of '.addGroup' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(36): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(42): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(42): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(42): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(44): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(44): error C2228: left of '.getGroups' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(44): error C2228: left of '.size' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(46): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(46): error C2228: left of '.getGroups' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(46): error C2227: left of '->getMembers' must point to class/struct/union/generic type
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(46): error C2228: left of '.size' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(48): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(48): error C2228: left of '.getName' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(48): error C2228: left of '.getGroups' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(48): error C2227: left of '->getMembers' must point to class/struct/union/generic type
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(48): error C2227: left of '->getName' must point to class/struct/union/generic type
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(50): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(50): error C2228: left of '.addConnection' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(50): error C2228: left of '.getGroups' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(50): error C2227: left of '->getMembers' must point to class/struct/union/generic type
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(57): error C2653: 'Solver': is not a class or namespace name
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(57): error C2039: 'string': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(57): error C2065: 'string': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(57): error C2146: syntax error: missing ')' before identifier 'filePath'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(58): error C2143: syntax error: missing ';' before '{'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(58): error C2447: '{': missing function header (old-style formal list?)
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(146): error C2653: 'Solver': is not a class or namespace name
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(152): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(152): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(152): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(154): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(154): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(154): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(156): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(156): error C2064: term does not evaluate to a function taking 1 arguments
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(159): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(159): error C2064: term does not evaluate to a function taking 1 arguments
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(164): error C2039: 'cout': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(164): error C2065: 'cout': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(165): error C2039: 'cout': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(165): error C2065: 'cout': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(165): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(165): error C2228: left of '.getName' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(166): error C2065: 'groupNames': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(166): error C2228: left of '.getName' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(166): error C2039: 'endl': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(166): error C2065: 'endl': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(169): error C2653: 'Solver': is not a class or namespace name
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(172): error C2065: 'People': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(172): error C2065: 'max': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(172): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(174): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(174): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(174): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(176): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(176): error C2228: left of '.getConnections' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(176): error C2228: left of '.size' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(176): error C2065: 'max': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(176): error C2227: left of '->getConnections' must point to class/struct/union/generic type
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(176): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(178): error C2065: 'max': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(178): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(183): error C2039: 'vector': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(183): error C2065: 'vector': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(183): error C2065: 'People': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(183): error C2059: syntax error: '>'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(184): error C2065: 'famousPeople': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(184): error C2228: left of '.push_back' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(184): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(184): error C2065: 'max': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(186): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(186): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(186): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(188): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(188): error C2228: left of '.getConnections' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(188): error C2228: left of '.size' must have class/struct/union
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(188): error C2065: 'max': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(188): error C2227: left of '->getConnections' must point to class/struct/union/generic type
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(188): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(190): error C2065: 'famousPeople': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(190): error C2228: left of '.push_back' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(190): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(190): error C2065: 'people': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(195): error C2039: 'cout': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(195): error C2065: 'cout': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(196): error C2065: 'famousPeople': undeclared identifier
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(196): error C2228: left of '.size' must have class/struct/union
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(196): note: type is 'unknown-type'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(198): error C2039: 'cout': is not a member of 'std'
+         c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+     1>c:\users\chris\documents\visual studio 2015\projects\sd5\sd5\solver.cpp(198): fatal error C1003: error count exceeds 100; stopping compilation
+         Generating Code...
      1>Done Building Project "C:\Users\Chris\documents\visual studio 2015\Projects\SD5\SD5\SD5.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:02.81
+Time Elapsed 00:00:03.54
