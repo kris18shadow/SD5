@@ -11,8 +11,11 @@ int main(int argc, char* argv[])
 	
 	Solver Solver(filePath);
 
+	std::cout << "\nCalculating...\n\n";
 	Solver.printMostConnectedPeople();
 	Solver.printMostConnectedGroups();
+
+	std::cout << std::endl;
 
 	return 0;
 }
